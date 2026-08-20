@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-svgo",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Vite plugin to import and compress svg files with SVGO",
   "main": "dist/index.js",
   "exports": {
@@ -13,7 +13,8 @@
     "/exports"
   ],
   "scripts": {
-    "build": "tsc"
+    "build": "node -e \"require('fs').rmSync('dist', { recursive: true, force: true })\" && tsc",
+    "test:package": "npm run build && node scripts/check-package.mjs"
   },
   "repository": {
     "type": "git",
@@ -36,7 +37,8 @@
   },
   "homepage": "https://github.com/r3dDoX/vite-plugin-svgo#readme",
   "devDependencies": {
-    "@types/node": "22.15.12"
+    "@types/node": "22.15.12",
+    "typescript": "6.0.3"
   },
   "dependencies": {
     "svgo": "4.0.1"

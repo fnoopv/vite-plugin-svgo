@@ -15,7 +15,7 @@
     "module": "nodenext",
     "strictBindCallApply": true,
     "noFallthroughCasesInSwitch": false,
-    "rootDir": "./",
+    "rootDir": "./src",
     "outDir": "./dist",
     "declaration": true,
     "types": [
